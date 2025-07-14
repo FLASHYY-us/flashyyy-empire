@@ -6,7 +6,7 @@ figlet "FLASHYYY EMPIRE" | lolcat
 echo -e "\n💀 Welcome to the Coldest Termux Empire 💀" | lolcat
 echo "Choose a tool or action from the menu below:" | lolcat
 
-# Menu
+# Main Menu with 50 Tools
 echo "[1] Tools" | lolcat
 echo "[2] Reports" | lolcat
 echo "[3] AI Assistant" | lolcat
@@ -16,44 +16,57 @@ echo "[6] Unlock Placeholders" | lolcat
 echo "[7] Telegram AI" | lolcat
 echo "[8] APK Bundler" | lolcat
 echo "[9] Export Logs" | lolcat
-echo "[10] IP Tracer" | lolcat
-echo "[11] RouterSploit" | lolcat
-echo "[12] XSStrike" | lolcat
-echo "[13] RedHawk" | lolcat
-echo "[14] EvilURL" | lolcat
-echo "[15] NexPhisher" | lolcat
-echo "[16] Hakku" | lolcat
-echo "[17] Infoga" | lolcat
-echo "[18] Hunner" | lolcat
-echo "[19] TheHarvester" | lolcat
-echo "[20] Venom" | lolcat
-echo "[21] Fsociety" | lolcat
-echo "[22] BlackEye" | lolcat
-echo "[23] Weeman" | lolcat
-echo "[24] ReconSpider" | lolcat
-echo "[25] FBI" | lolcat
-echo "[26] Trity" | lolcat
-echo "[27] SocialBox" | lolcat
-echo "[28] CamPhish" | lolcat
-echo "[29] IPGeoLocation" | lolcat
-echo "[30] InSpy" | lolcat
-echo "[31] D-TECT" | lolcat
-echo "[32] Metasploit" | lolcat
-echo "[33] CVE Scanner" | lolcat
-echo "[34] Payload Generator" | lolcat
-echo "[35] SayCheese" | lolcat
-echo "[36] Tool-X" | lolcat
-echo "[37] Sherlock (Username Finder)" | lolcat
-echo "[38] AndroRAT" | lolcat
-echo "[39] ArpSpoof" | lolcat
-echo "[40] Beef-XSS" | lolcat
-echo "[41] Keylogger" | lolcat
-echo "[42] Packet Sniffer" | lolcat
-echo "[43] PDF Report Generator" | lolcat
-echo "[44] Location Tracker" | lolcat
 
-# Input
-read -p $'\nEnter choice: ' choice
+# Core Tools
+for i in {10..50}
+do
+  case $i in
+    10) echo "[10] IP Tracer" ;;
+    11) echo "[11] RouterSploit" ;;
+    12) echo "[12] XSStrike" ;;
+    13) echo "[13] RedHawk" ;;
+    14) echo "[14] EvilURL" ;;
+    15) echo "[15] NexPhisher" ;;
+    16) echo "[16] Hakku" ;;
+    17) echo "[17] Infoga" ;;
+    18) echo "[18] Hunner" ;;
+    19) echo "[19] TheHarvester" ;;
+    20) echo "[20] Venom" ;;
+    21) echo "[21] Fsociety" ;;
+    22) echo "[22] BlackEye" ;;
+    23) echo "[23] Weeman" ;;
+    24) echo "[24] ReconSpider" ;;
+    25) echo "[25] FBI" ;;
+    26) echo "[26] Trity" ;;
+    27) echo "[27] SocialBox" ;;
+    28) echo "[28] CamPhish" ;;
+    29) echo "[29] IPGeoLocation" ;;
+    30) echo "[30] InSpy" ;;
+    31) echo "[31] D-TECT" ;;
+    32) echo "[32] Metasploit" ;;
+    33) echo "[33] CVE Scanner" ;;
+    34) echo "[34] Payload Generator" ;;
+    35) echo "[35] SayCheese" ;;
+    36) echo "[36] Tool-X" ;;
+    37) echo "[37] Sherlock" ;;
+    38) echo "[38] AndroRAT" ;;
+    39) echo "[39] ArpSpoof" ;;
+    40) echo "[40] Beef-XSS" ;;
+    41) echo "[41] Keylogger" ;;
+    42) echo "[42] Packet Sniffer" ;;
+    43) echo "[43] PDF Report Generator" ;;
+    44) echo "[44] Location Tracker" ;;
+    45) echo "[45] Photon" ;;
+    46) echo "[46] Nmap Automator" ;;
+    47) echo "[47] LazyRecon" ;;
+    48) echo "[48] Crips" ;;
+    49) echo "[49] DarkFly" ;;
+    50) echo "[50] Hakku Framework" ;;
+  esac | lolcat
+done
+
+# User Input
+read -p $'\nEnter your choice: ' choice
 
 # Case logic
 case $choice in
@@ -101,5 +114,11 @@ case $choice in
   42) bash tools/sniffer.sh ;;
   43) bash tools/report-generator.sh ;;
   44) bash tools/location-tracker.sh ;;
+  45) bash tools/photon.sh ;;
+  46) bash tools/nmap-automator.sh ;;
+  47) bash tools/lazyrecon.sh ;;
+  48) bash tools/crips.sh ;;
+  49) bash tools/darkfly.sh ;;
+  50) bash tools/hakku-framework.sh ;;
   *) echo "❌ Invalid option!" | lolcat ;;
 esac

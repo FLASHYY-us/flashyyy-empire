@@ -1,12 +1,10 @@
 #!/bin/bash
 clear
-
-# Cold Branding Header
 figlet "FLASHYYY EMPIRE" | lolcat
 echo -e "\n❄️  Welcome to the Flashyyy Dashboard  ❄️" | lolcat
 echo "Choose a category:" | lolcat
 
-# GUI Menu Options
+# Dashboard Options
 echo "[1] Tools" | lolcat
 echo "[2] Reports" | lolcat
 echo "[3] AI Assistant" | lolcat
@@ -44,10 +42,8 @@ echo "[34] ARP Spoof" | lolcat
 echo "[35] CVE Scanner" | lolcat
 echo "[36] Tool-X Installer" | lolcat
 
-# Get User Choice
 read -p $'\nEnter choice: ' choice
 
-# Logic
 case $choice in
   1) bash empire.sh ;;
   2) cd ~/.flashyyy/reports && ls ;;
@@ -85,5 +81,5 @@ case $choice in
   34) bash tools/arpspoof.sh ;;
   35) bash tools/cve-scanner.sh ;;
   36) bash tools/toolx-installer.sh ;;
-  *) echo "❌ Invalid Option!" | lolcat ;;
+  *) echo "❌ Invalid option!" | lolcat ;;
 esac
